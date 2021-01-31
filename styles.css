@@ -1,0 +1,171 @@
+ /* Variables */
+ :root {
+     /* Typography */
+     --font-heading: 'Poppins', sans-serif;
+     --font-body: 'Open Sans', sans-serif;
+
+     /* Colors */
+     --violet-color: hsl(257, 40%, 49%);
+     --soft-magneta-color: hsl(300, 69%, 71%);
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-image: url('./images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top bottom;
+    background-size: contain;
+    background-color: var(--violet-color);
+}
+
+.wrapper {
+    padding: 2.5rem;
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.wrapper .logo {
+    display: inline-block;
+    width: 14rem;
+    height: 3rem;
+}
+
+.hero {
+    margin: 10rem 0;
+    display: grid;
+    gap: 10rem;
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 2.2rem 0;
+}
+
+.hero-content .button {
+    margin-top: 1rem;
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--violet-color);
+    background-color: #ffffff;
+    padding: 1.2rem 8rem;
+    border-radius: 3.5rem;
+    box-shadow: 2px 4px 9px 0px rgba(0,0,0,0.2);
+    transition: all .2s ease-in-out;
+}
+
+.hero-content .button:hover {
+    background-color: var(--soft-magneta-color);
+    color: #ffffff;
+    box-shadow: 2px 4px 9px 0px rgba(0,0,0,0.5);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: .1rem solid #ffffff;
+    border-radius: 50%;
+    color:#ffffff;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    transition: all .2s ease-in-out;
+}
+
+.social-links a:hover {
+    color: var(--soft-magneta-color);
+}
+
+/* Media Queries */
+@media (min-width: 500px) {
+    .wrapper {
+        padding: 6.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero img {
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1120px) {
+    header {
+        background-image: url('./images/bg-desktop.svg');
+    }
+
+    .hero {
+        gap: 5rem;
+        grid-template-columns: 1fr .8fr;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.6rem;
+    }
+
+    .social-links {
+        justify-content: flex-end;
+    }
+}
